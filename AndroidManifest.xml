@@ -16,6 +16,9 @@
         <activity android:name=".DataPegawaiActivity"
                 android:label="@string/app_name">
         </activity>
+        <activity android:name=".DataBarangActivity"
+                  android:label="@string/app_name">
+        </activity>
         <activity android:name=".SingleMenuItemActivity"
                   android:label="@string/app_name">
         </activity>

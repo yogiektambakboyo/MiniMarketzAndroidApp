@@ -22,15 +22,22 @@ import java.util.HashMap;
 public class DataPegawaiActivity extends ListActivity {
 
     // url to make request
-    //private static String url = "http://api.androidhive.info/contacts/";
-    private static String url = "http://192.168.16.13:3000/api/android/datapegawai/";
+
+    private static String url = "http://mini-marketz.herokuapp.com/api/android/datapegawai/";
 
     // JSON Node names
     private static final String TAG_PEGAWAI = "datapegawai";
     private static final String TAG_ID = "_id";
     private static final String TAG_NAMA = "nama";
-    private static final String TAG_UMUR = "umur";
-    private static final String TAG_ALAMAT = "alamat";
+    private static final String TAG_JENIS_KELAMIN = "jenis_kelamin";
+    private static final String TAG_AGAMA = "agama";
+    private static final String TAG_TANGGAL_MASUK = "tanggal_masuk";
+    private static final String TAG_STATUS = "status";
+    private static final String TAG_NEGARA = "negara";
+    private static final String TAG_EMAIL = "email";
+    private static final String TAG_TELEPON = "telepon";
+    private static final String TAG_TELEPON_RUMAH = "telepon_rumah";
+    private static final String TAG_TELEPON_HANDPHONE = "telepon_handphone";
 
     // contacts JSONArray
     JSONArray datapegawai = null;
@@ -60,17 +67,18 @@ public class DataPegawaiActivity extends ListActivity {
                 // Storing each json item in variable
                 String id = c.getString(TAG_ID);
                 String nama = c.getString(TAG_NAMA);
-                String umur = c.getString(TAG_UMUR);
-                String alamat = c.getString(TAG_ALAMAT);
-                //String email = c.getString(TAG_EMAIL);
-                //String address = c.getString(TAG_ADDRESS);
-                //String gender = c.getString(TAG_GENDER);
+                String jenis_kelamin = c.getString(TAG_JENIS_KELAMIN);
+                String agama = c.getString(TAG_AGAMA);
+                String tanggal_masuk = c.getString(TAG_TANGGAL_MASUK);
+                String status = c.getString(TAG_STATUS);
+                String negara = c.getString(TAG_NEGARA);
+                String email = c.getString(TAG_EMAIL);
 
-                // Phone number is agin JSON Object
-                //JSONObject phone = c.getJSONObject(TAG_PHONE);
-                //String mobile = phone.getString(TAG_PHONE_MOBILE);
-                //String home = phone.getString(TAG_PHONE_HOME);
-                //String office = phone.getString(TAG_PHONE_OFFICE);
+                // Phone number is again JSON Object
+                //JSONObject telepon = c.getJSONObject(TAG_TELEPON);
+                //String telepon_rumah = telepon.getString(TAG_TELEPON_RUMAH);
+                //String telepon_handphone = telepon.getString(TAG_TELEPON_HANDPHONE);
+
 
                 // creating new HashMap
                 HashMap<String, String> map = new HashMap<String, String>();
@@ -78,10 +86,11 @@ public class DataPegawaiActivity extends ListActivity {
                 // adding each child node to HashMap key => value
                 map.put(TAG_ID, id);
                 map.put(TAG_NAMA, nama);
-                map.put(TAG_UMUR, umur);
-                map.put(TAG_ALAMAT, alamat);
-                //map.put(TAG_EMAIL, email);
-                //map.put(TAG_PHONE_MOBILE, mobile);
+                map.put(TAG_JENIS_KELAMIN, jenis_kelamin);
+                map.put(TAG_AGAMA, agama);
+                /*map.put(TAG_TELEPON_RUMAH, telepon_rumah);
+                map.put(TAG_TELEPON_HANDPHONE, telepon_handphone);*/
+                map.put(TAG_EMAIL, email);
 
                 // adding HashList to ArrayList
                 contactList.add(map);
@@ -95,9 +104,9 @@ public class DataPegawaiActivity extends ListActivity {
          * Updating parsed JSON data into ListView
          * */
         ListAdapter adapter = new SimpleAdapter(this, contactList,
-                R.layout.list_item,
-                new String[] { TAG_ID, TAG_NAMA, TAG_ALAMAT }, new int[] {
-                R.id._id, R.id.nama, R.id.alamat });
+                R.layout.list_pegawai,
+                new String[] { TAG_ID, TAG_NAMA, TAG_JENIS_KELAMIN, TAG_AGAMA }, new int[] {
+                R.id._id, R.id.nama, R.id.jenis_kelamin, R.id.agama });
 
         setListAdapter(adapter);
 
@@ -111,15 +120,15 @@ public class DataPegawaiActivity extends ListActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // getting values from selected ListItem
-                String name = ((TextView) view.findViewById(R.id.nama)).getText().toString();
-                //String cost = ((TextView) view.findViewById(R.id.email)).getText().toString();
-                //String description = ((TextView) view.findViewById(R.id.mobile)).getText().toString();
+                String nama = ((TextView) view.findViewById(R.id.nama)).getText().toString();
+                String jenis_kelamin= ((TextView) view.findViewById(R.id.jenis_kelamin)).getText().toString();
+                String agama = ((TextView) view.findViewById(R.id.agama)).getText().toString();
 
                 // Starting new intent
                 Intent in = new Intent(getApplicationContext(), SingleMenuItemActivity.class);
-                in.putExtra(TAG_NAMA, name);
-                //in.putExtra(TAG_EMAIL, cost);
-                //in.putExtra(TAG_PHONE_MOBILE, description);
+                in.putExtra(TAG_NAMA, nama);
+                in.putExtra(TAG_JENIS_KELAMIN, jenis_kelamin);
+                in.putExtra(TAG_AGAMA, agama);
                 startActivity(in);
 
             }

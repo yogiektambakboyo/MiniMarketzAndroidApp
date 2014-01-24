@@ -23,10 +23,17 @@ public class MainActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         String item = (String) getListAdapter().getItem(position);
         Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
-        if(item == "Pegawai"){
+
+       if(item == "Pegawai"){
             Intent pegawai = new Intent(MainActivity.this, DataPegawaiActivity.class);
             startActivity(pegawai);
-        }
+       }
+
+       if(item == "Barang"){
+           Intent barang = new Intent(MainActivity.this, DataBarangActivity.class);
+           startActivity(barang);
+       }
+
        if(item == "Quit"){
            this.finish();
        }
