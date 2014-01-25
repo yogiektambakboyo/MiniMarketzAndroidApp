@@ -6,6 +6,11 @@
     <!-- Main ListView
          Always give id value as list(@android:id/list)
     -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jumlah_data" android:layout_gravity="left|center_vertical"
+            android:text="Menampilkan X data" android:textSize="20dip" android:textStyle="bold"/>
     <ListView
             android:id="@android:id/list"
             android:layout_width="fill_parent"

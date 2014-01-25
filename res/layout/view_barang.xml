@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip" android:text="View Barang" android:textSize="25dip"
+            android:textStyle="bold" android:visibility="visible" android:layout_marginLeft="5dip"
+            android:layout_marginBottom="10dip">
+    </TextView>
+
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+            android:measureWithLargestChild="false" android:visibility="visible" android:paddingLeft="5dip">
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama "
+                    android:id="@+id/label_nama_barang" android:textColor="#0c84c6" android:textSize="20dip"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textColor="#0c84c6" android:textSize="20dip"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:id="@+id/view_nama_barang" android:layout_column="1" android:textSize="20dip" android:textColor="#0c84c6"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipe"
+                    android:id="@+id/label_tipe_barang" android:textColor="#0c84c6" android:textSize="20dip"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textColor="#0c84c6" android:textSize="20dip"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipe"
+                    android:id="@+id/view_tipe_barang" android:layout_column="1" android:textSize="20dip" android:textColor="#0c84c6"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga"
+                    android:id="@+id/label_harga_barang" android:textColor="#0c84c6" android:textSize="20dip"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textColor="#0c84c6" android:textSize="20dip"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga"
+                    android:id="@+id/view_harga_barang" android:layout_column="1" android:textSize="20dip" android:textColor="#0c84c6"/>
+        </TableRow>
+
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock"
+                    android:textColor="#0c84c6" android:textSize="20dip"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textColor="#0c84c6" android:textSize="20dip"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock"
+                    android:id="@+id/view_stock_barang" android:textColor="#0c84c6" android:textSize="20dip"/>
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

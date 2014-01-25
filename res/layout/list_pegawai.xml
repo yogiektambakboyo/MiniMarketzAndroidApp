@@ -24,23 +24,102 @@
                 android:textStyle="bold"
                 android:paddingTop="6dip"
                 android:paddingBottom="2dip"
-                android:layout_marginTop="5dip"
-                android:layout_marginLeft="5dip"/>
+                android:layout_marginLeft="5dip" android:text="Nama"/>
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/_id"
                 android:textSize="14sp"
-                android:layout_marginLeft="5dip"/>
+                android:layout_marginLeft="5dip" android:text="id"/>
         <TextView
                 android:layout_width="200dip"
                 android:layout_height="wrap_content"
                 android:id="@+id/jenis_kelamin"
                 android:textSize="14sp"
-                android:layout_marginLeft="5dip"/>
+                android:layout_marginLeft="5dip" android:text="jenis kelamin" android:visibility="visible"/>
+
+
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/agama" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"/>
+                android:id="@+id/alamat_kota" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Kota"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/agama" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="agama" android:visibility="invisible"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/tanggal_masuk" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Tanggal Masuk" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/status" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Status" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/negara" android:layout_gravity="center_vertical|left" android:layout_marginLeft="5dip"
+                android:text="Negara" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/telepon_rumah" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="telepon rumah" android:visibility="invisible"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/telepon_handphone" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="telepon HP" android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:id="@+id/email" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+            android:text="Email" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/alamat_kelurahan" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Kelurahan" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/alamat_kecamatan" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Kecamatan" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/alamat_provinsi" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Provinsi" android:visibility="invisible"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/alamat_kodepos" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="kodepos" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/ttl_tempat" android:layout_gravity="left|center_vertical" android:layout_marginLeft="5dip"
+                android:text="Tempat Lahir" android:visibility="invisible"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:id="@+id/ttl_tanggal" android:layout_gravity="center_vertical|bottom|left" android:layout_marginLeft="5dip"
+                android:text="Tanggal Lahir" android:visibility="invisible"/>
+
+
     </LinearLayout>
 </LinearLayout>

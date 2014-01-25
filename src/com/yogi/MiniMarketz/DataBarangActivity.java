@@ -30,6 +30,7 @@ public class DataBarangActivity extends ListActivity {
     private static final String TAG_TIPE = "tipe";
     private static final String TAG_HARGA = "harga";
     private static final String TAG_STOCK = "stock";
+    private Integer jumlahData = 0;
 
     // contacts JSONArray
     JSONArray databarang = null;
@@ -51,6 +52,10 @@ public class DataBarangActivity extends ListActivity {
         try {
             // Getting Array of Barang
             databarang = json.getJSONArray(TAG_BARANG);
+            jumlahData = databarang.length();
+            String jumlahdata = jumlahData.toString();
+            TextView jumlah_data = (TextView) findViewById(R.id.jumlah_data);
+            jumlah_data.setText("Menampilkan " + jumlahdata + " data");
 
             // looping through All Barang
             for(int i = 0; i < databarang.length(); i++){
@@ -88,7 +93,7 @@ public class DataBarangActivity extends ListActivity {
         ListAdapter adapter = new SimpleAdapter(this, barangList,
                 R.layout.list_barang,
                 new String[] { TAG_ID, TAG_NAMA, TAG_TIPE, TAG_HARGA, TAG_STOCK }, new int[] {
-                R.id._id, R.id.nama,R.id.tipe, R.id.harga, R.id.stock });
+                R.id._id, R.id.nama, R.id.tipe, R.id.harga, R.id.stock });
 
         setListAdapter(adapter);
 
@@ -103,12 +108,14 @@ public class DataBarangActivity extends ListActivity {
                                     int position, long id) {
                 // getting values from selected ListItem
                 String nama = ((TextView) view.findViewById(R.id.nama)).getText().toString();
+                String tipe = ((TextView) view.findViewById(R.id.tipe)).getText().toString();
                 String harga = ((TextView) view.findViewById(R.id.harga)).getText().toString();
                 String stock = ((TextView) view.findViewById(R.id.stock)).getText().toString();
 
                 // Starting new intent
-                Intent in = new Intent(getApplicationContext(), SingleMenuItemActivity.class);
+                Intent in = new Intent(getApplicationContext(), ViewBarangActivity.class);
                 in.putExtra(TAG_NAMA, nama);
+                in.putExtra(TAG_TIPE, tipe);
                 in.putExtra(TAG_HARGA, harga);
                 in.putExtra(TAG_STOCK, stock);
                 startActivity(in);
