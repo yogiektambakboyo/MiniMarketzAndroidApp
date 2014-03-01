@@ -19,9 +19,13 @@
         <activity android:name=".DataBarangActivity"
                   android:label="@string/app_name">
         </activity>
+        <activity android:name=".TransaksiPembelianActivity"
+                    android:label="@string/app_name"/>
+
         <activity android:name=".ViewBarangActivity"/>
         <activity android:name=".ViewPegawaiActivity"/>
-        <activity android:name=".TransaksiPembelianActivity"/>
+        <activity android:name=".ViewTransaksasiActivity"/>
+
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

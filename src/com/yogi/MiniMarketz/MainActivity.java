@@ -34,8 +34,8 @@ public class MainActivity extends ListActivity {
        }
 
        if(item == "Transaksi Pembelian"){
-           Intent barang = new Intent(MainActivity.this, TransaksiPembelianActivity.class);
-           startActivity(barang);
+           Intent transaksipembelian = new Intent(MainActivity.this, TransaksiPembelianActivity.class);
+           startActivity(transaksipembelian);
        }
 
        if(item == "Quit"){

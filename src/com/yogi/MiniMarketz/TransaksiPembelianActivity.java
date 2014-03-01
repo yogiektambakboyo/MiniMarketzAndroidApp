@@ -116,7 +116,7 @@ public class TransaksiPembelianActivity extends ListActivity {
                 String penerima = ((TextView) view.findViewById(R.id.penerima)).getText().toString();
 
                 // Starting new intent
-                Intent in = new Intent(getApplicationContext(), TransaksiPembelianActivity.class);
+                Intent in = new Intent(getApplicationContext(), ViewTransaksasiActivity.class);
                 in.putExtra(TAG_TANGGAL_TRANSAKSI, tanggal_transaksi);
                 in.putExtra(TAG_NO_KWITANSI, no_kwitansi);
                 in.putExtra(TAG_TOTAL_TRANSAKSI, total_transaksi);
