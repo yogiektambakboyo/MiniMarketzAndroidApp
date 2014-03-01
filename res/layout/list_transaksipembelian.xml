@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <!-- Name Label -->
+
+
+        <ImageView
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:id="@+id/imageView" android:layout_gravity="center|top"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/user" android:layout_marginTop="5dip"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/tanggal_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#43bd00"
+                    android:textSize="20dip"
+                    android:paddingTop="6dip"
+                    android:paddingBottom="2dip"
+                    android:layout_marginLeft="5dip" android:text="Tanggal Transaksi" android:textStyle="bold"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/_id"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="5dip" android:text="ID"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no_kwitansi" android:layout_marginLeft="5dip" android:text="No Kwitansi"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/total_transaksi"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="5dip" android:visibility="visible" android:text="Total Transaksi"
+                    android:textColor="#fff4f4" android:textStyle="bold"/>
+            <TextView
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/penerima" android:layout_gravity="center_vertical|left" android:layout_marginLeft="5dip"
+                    android:visibility="visible" android:textSize="14sp" android:text="Penerima"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

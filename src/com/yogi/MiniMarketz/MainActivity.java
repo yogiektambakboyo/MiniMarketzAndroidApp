@@ -11,8 +11,7 @@ public class MainActivity extends ListActivity {
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        String[] values = new String[] { "Pegawai", "Barang", "User",
-                "Role", "Quit"};
+        String[] values = new String[] { "Pegawai", "Barang", "Transaksi Pembelian", "Transaksi Penjualan", "Quit"};
         // use your own layout
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.main, R.id.label, values);
@@ -31,6 +30,11 @@ public class MainActivity extends ListActivity {
 
        if(item == "Barang"){
            Intent barang = new Intent(MainActivity.this, DataBarangActivity.class);
+           startActivity(barang);
+       }
+
+       if(item == "Transaksi Pembelian"){
+           Intent barang = new Intent(MainActivity.this, TransaksiPembelianActivity.class);
            startActivity(barang);
        }
 
